@@ -32,6 +32,38 @@ Un CRUD a una base de datos PostgreSQL, por consola de comando
  npm start
 ```
 
+## Script DASE DE DATOS:
+```
+CREATE DATABASE "AlwaysMusic"
+    WITH
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'English_United States.1252'
+    LC_CTYPE = 'English_United States.1252'
+    LOCALE_PROVIDER = 'libc'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1
+    IS_TEMPLATE = False;
+```
+
+## Script de la TABLA:
+```
+CREATE TABLE IF NOT EXISTS public.estudiantes
+(
+    nombre character varying(200) COLLATE pg_catalog."default",
+    rut character varying(200) COLLATE pg_catalog."default",
+    curso character varying(100) COLLATE pg_catalog."default",
+    nivel character varying(50) COLLATE pg_catalog."default"
+)
+```
+
+## Definir un arcvhivo .ENV con las siguientes constantes:
+```
+DB_NAME=AlwaysMusic
+DB_USER=postgres
+DB_PASSWORD=postgres
+```
+
 ## Uso
 
 ```
